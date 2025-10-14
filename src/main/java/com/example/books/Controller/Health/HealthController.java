@@ -13,7 +13,7 @@ public class HealthController {
         this.dataSource = dataSource;
     }
 
-    @GetMapping("/health")
+    @GetMapping("/api/health")
     public String health() {
         try (Connection connection = dataSource.getConnection()) {
             if (connection.isValid(2)) {
