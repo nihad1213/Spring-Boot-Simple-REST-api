@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-@RequestMapping("api/books")
+@RequestMapping("api/book/")
 public class BookController {
     // Enpoints will be writed in here
 }
