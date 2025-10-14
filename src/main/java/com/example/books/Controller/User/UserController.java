@@ -7,4 +7,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/user/")
 public class UserController {
+    // Endpoints will be writed in here
 }
