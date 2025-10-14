@@ -1,10 +1,12 @@
 package com.example.books.Controller.Health;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import javax.sql.DataSource;
 import java.sql.Connection;
 
+@RequiredArgsConstructor
 @RestController
 public class HealthController {
     private final DataSource dataSource;
