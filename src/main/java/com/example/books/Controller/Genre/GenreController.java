@@ -1,13 +1,12 @@
-package com.example.books.Controller.Jenre;
+package com.example.books.Controller.Genre;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/jenre/")
-public class JenreController {
+public class GenreController {
     // Enpoints will be writed in here
 }
