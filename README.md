@@ -1,12 +1,12 @@
-# 📚 Spring Boot REST API – Books, Authors & Users
+# 📚 Spring Boot REST API – Users, Books & Genres
 
 ## 📝 Project Overview
 This project is a simple **REST API** built with **Spring Boot**.  
 It manages three main entities:
 
-1. **Books** – information about books (title, description, author, etc.).
-2. **Authors** – information about authors (name, bio, etc.).
-3. **Users** – system users who can interact with books (e.g., add to favorites).
+1. **Users** – system users who can write books or mark them as favorites.  
+2. **Books** – information about books (title, description, author, genre, etc.).  
+3. **Genres** – categories for books (e.g., Fiction, Science, History).
 
 The project demonstrates **CRUD operations**, **entity relationships**, and a **layered architecture** (Controller → Service → Repository → Database).
 
@@ -27,37 +27,38 @@ The project demonstrates **CRUD operations**, **entity relationships**, and a **
 ## 🔑 Business Logic
 
 ### Entities & Relationships
-- **Author**
-    - One author can write **many books**.
-    - Example: J.K. Rowling → Harry Potter series.
+- **User**
+    - Can **write many books**.
+    - Can have **many favorite books**.
 
 - **Book**
-    - Belongs to **one author**.
-    - Can be associated with **many users** (favorite books).
+    - Belongs to **one author** (User).  
+    - Belongs to **one genre**.  
+    - Can be favorited by **many users**.
 
-- **User**
-    - Can have **many favorite books**.
-    - Users don’t create books/authors; they just interact with them.
+- **Genre**
+    - Can have **many books**.
 
 ### Relationships
-- `Author (1) ↔ (M) Book`
-- `User (M) ↔ (M) Book` (many-to-many, for favorites)
+- `User (1) ↔ (M) Book` – One user writes many books  
+- `Book (M) ↔ (M) User` – Many users can favorite many books  
+- `Genre (1) ↔ (M) Book` – One genre has many books
 
 ---
 
 ## 🚀 Features
-- **Authors**
-    - Create, read, update, delete authors.
-    - Get all books by a specific author.
+- **Users**
+    - Register new users.
+    - Add/remove favorite books.
+    - View all favorite books.
 
 - **Books**
     - Create, read, update, delete books.
-    - Assign a book to an author.
-    - List all books with optional filters (title, author).
+    - Assign books to authors and genres.
+    - List all books with optional filters (title, author, genre).
 
-- **Users**
-    - Register a new user.
-    - Add/remove favorite books.
-    - View all favorite books of a user.
+- **Genres**
+    - Create, read, update, delete genres.
+    - List all books under a specific genre.
 
 ---
