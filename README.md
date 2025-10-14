@@ -61,5 +61,3 @@ The project demonstrates **CRUD operations**, **entity relationships**, and a **
     - View all favorite books of a user.
 
 ---
-
-## 📂 Project Structure
