@@ -1,4 +1,25 @@
 package com.example.books.Entity.Author;
 
+import com.example.books.Entity.Book.Book;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Author {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String fullName;
+
+    @OneToMany(mappedBy = "author")
+    private List<Book> books;
+
 }
