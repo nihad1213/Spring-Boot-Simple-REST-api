@@ -9,11 +9,8 @@ import java.sql.Connection;
 @RequiredArgsConstructor
 @RestController
 public class HealthController {
-    private final DataSource dataSource;
 
-    public HealthController(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
+    private final DataSource dataSource;
 
     @GetMapping("/api/health")
     public String health() {
@@ -24,7 +21,6 @@ public class HealthController {
         } catch (Exception e) {
             return "Connection is FAILED!";
         }
-
         return "UNKNOWN!";
     }
 }
