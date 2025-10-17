@@ -1,6 +1,7 @@
 package com.example.books.Entity.Genre;
 
 import com.example.books.Entity.Book.Book;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,5 +19,6 @@ public class Genre {
     private String name;
 
     @ManyToMany(mappedBy = "genres")
+    @JsonIgnore
     private List<Book> books;
 }
