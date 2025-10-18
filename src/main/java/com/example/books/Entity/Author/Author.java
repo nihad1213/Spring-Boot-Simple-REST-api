@@ -1,6 +1,7 @@
 package com.example.books.Entity.Author;
 
 import com.example.books.Entity.Book.Book;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +21,7 @@ public class Author {
     private String fullName;
 
     @OneToMany(mappedBy = "author")
+    @JsonIgnore
     private List<Book> books;
 
 }

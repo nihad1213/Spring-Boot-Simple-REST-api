@@ -6,5 +6,5 @@ import com.example.books.Entity.Author.Author;
 
 @Repository
 public interface AuthorRepository extends JpaRepository<Author, Long> {
-    boolean existsByName(String fullName);
+    boolean existsByFullName(String fullName);
 }
