@@ -1,4 +1,8 @@
 package com.example.books.Dto.Author.Request;
 
-public @interface AuthorUpdateDto {
+import lombok.Data;
+
+@Data
+public class AuthorUpdateDto {
+    public String fullName;
 }
